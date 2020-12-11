@@ -1,3 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:userdb
+    driver-class-name: org.h2.Driver
+    username: ibm
+    password: ibm
+  main:
+    allow-bean-definition-overriding: true
+    
+    
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
+  application:
+    name: loginMs
+    
 security:
   oauth2:
     client:
@@ -7,9 +25,6 @@ security:
       userAuthorizationUri: https://us-south.appid.cloud.ibm.com/oauth/v4/d45e06da-d9e7-40ee-8949-2ff63336f552/authorization
     resource:
       userInfoUri: https://us-south.appid.cloud.ibm.com/oauth/v4/d45e06da-d9e7-40ee-8949-2ff63336f552/userinfo
-
-spring:
-  main:
-    allow-bean-definition-overriding: true
+    
 server:
   port: 8200
